@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  --header-height: 4.5rem;
+  --body-font: 'DM Sans', sans-serif;
+  --heading-font: 'Manrope', sans-serif;
+  --editorial-font: 'DM Serif Display', Georgia, serif;
+  --body-color: #ffffff;
+  --container-color: #ffffff;
+  --title-color: #171717;
+  --title-color-dark: #3f3f3f;
+  --text-color: #626262;
+  --accent-color: #a4a4a4;
+  --border-color: #dedede;
+  --shadow-soft: 0 14px 35px rgba(0, 0, 0, 0.07);
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --normal-font-size: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --menu-font-size: clamp(1.75rem, 3.5vw, 3rem);
+  --section-title-size: clamp(2.5rem, 5vw, 4rem);
+  --h1-font-size: clamp(2.7rem, 6vw, 5rem);
+  --h3-font-size: 1.125rem;
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --z-modal: 1000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+  margin: 0;
+  background: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  font-family: var(--heading-font);
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.container {
+  width: min(100% - 3rem, 1120px);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.skills,
+.projects,
+.qualification {
+  background: #f4f4f4;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin: 0 0 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.section-heading__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--text-color);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-heading__title,
+.section_title {
+  margin: 0 0 0.75rem;
+  color: var(--title-color);
+  font-family: var(--editorial-font);
+  font-size: var(--section-title-size);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.section-heading__subtitle,
+.section_subtitle,
+.section__subtitle {
+  display: block;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1.25rem;
+  border: 1px solid var(--title-color);
+  border-radius: 0.2rem;
+  background: var(--title-color);
+  color: #ffffff;
+  font-weight: 700;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #3d3d3d;
+  border-color: #3d3d3d;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--title-color);
+}
+
+.button--outline:hover {
+  color: #ffffff;
+}
+
+.button_icon,
+.button__icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-left: 0.25rem;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 2.25rem, 640px);
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 1.5rem, 440px);
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

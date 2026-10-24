@@ -1,0 +1,141 @@
+.about__story {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: clamp(2rem, 7vw, 6rem);
+}
+
+.about__visual {
+  position: relative;
+  margin: 0;
+}
+
+.about__img {
+  width: 100%;
+  max-height: 620px;
+  aspect-ratio: 0.82;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center 28%;
+  filter: grayscale(1);
+}
+
+.about__caption {
+  margin-top: 0.75rem;
+  color: var(--text-color);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about__data {
+  padding-top: clamp(0rem, 4vw, 3rem);
+}
+
+.about__kicker,
+.about__statement-label {
+  color: var(--text-color);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.about__description:first-of-type {
+  margin-top: 1.1rem;
+}
+
+.about__description {
+  margin: 0 0 1rem;
+  color: #454545;
+  font-size: var(--normal-font-size);
+  line-height: 1.9;
+}
+
+.about__resume {
+  margin-top: 0.6rem;
+}
+
+.about__statement {
+  margin: clamp(3.5rem, 8vw, 7rem) 0;
+  padding: clamp(1.75rem, 5vw, 3.5rem) 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.about__statement p {
+  margin: 0.75rem 0 0;
+  color: var(--title-color);
+  font-family: var(--editorial-font);
+  font-size: clamp(2rem, 5.5vw, 4.25rem);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.about__info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.about__fact {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: start;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.about__fact-number {
+  color: #8a8a8a;
+  font-family: var(--editorial-font);
+  font-size: var(--font-size-lg);
+}
+
+.about__title {
+  margin: 0 0 0.35rem;
+  font-size: var(--font-size-sm);
+}
+
+.about__subtitle {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about__story {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about__visual {
+    width: min(78%, 440px);
+  }
+
+  .about__img {
+    max-height: 560px;
+  }
+
+  .about__data {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__visual {
+    width: 92%;
+  }
+
+  .about__info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .about__fact {
+    padding-top: 0.85rem;
+  }
+}

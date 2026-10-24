@@ -1,0 +1,51 @@
+.certifications {
+  background: #ffffff;
+}
+
+.certifications__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.certification__card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 0;
+  padding: 1.35rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.certification__icon {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 2.25rem;
+  place-items: center;
+  border-radius: 0;
+  background: #eeeeee;
+  color: var(--title-color);
+  font-size: 1.25rem;
+}
+
+.certification__title {
+  margin: 0 0 0.45rem;
+  font-size: var(--normal-font-size);
+}
+
+.certification__issuer {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 560px) {
+  .certification__card {
+    gap: 0.9rem;
+  }
+}
