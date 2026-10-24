@@ -34,7 +34,7 @@ export function About() {
               I’m also curious about how data and AI can make useful products even better.
             </p>
             <a href={CV} className="button about__resume" download>
-              Download resume <i className="uil uil-arrow-down" aria-hidden="true"></i>
+              Download résumé <i className="uil uil-arrow-down" aria-hidden="true"></i>
             </a>
           </div>
         </div>
